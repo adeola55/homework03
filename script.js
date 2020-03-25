@@ -17,8 +17,10 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
 function getuserinput(){
   var pswdlength=prompt("length of the password")
+  if( pswdlength >= 8 && pswdlength <= 128){
   var yesnumbers=confirm("would you like to have numbers")
   var yesuppercase=confirm("would you like to have uppercase letters")
   var yeslowercase=confirm("would you like to have lowercase letters")
@@ -43,5 +45,8 @@ function getuserinput(){
   }
 
  console.log("Password:",upassword)
- return upassword
+ return upassword}
+ else{
+   return "password lenght has to be greater than 8 and less than 128"
+ }
 }
