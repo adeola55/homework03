@@ -25,27 +25,34 @@ function getuserinput(){
   var yesuppercase=confirm("would you like to have uppercase letters")
   var yeslowercase=confirm("would you like to have lowercase letters")
   var yescharacters=confirm("would you like to have special characters")
-  if(yesnumbers){
-    allcharacters+=validnumbers
+  if( !yescharacters && !yesnumbers && !yesuppercase && !yeslowercase){
+    return "please select at least one option"
   }
-  if(yesuppercase){
-    allcharacters+=validuppercase
-  }
-  if(yeslowercase){
-    allcharacters+=validlowercase
-  }
-  if(yescharacters){
-    allcharacters+=validspecialcharacters
-  }
-  console.log("AcceptedCharacters",allcharacters);
-  for(let i=1;i<=pswdlength;i++){
-    var index = Math.floor(Math.random() * allcharacters.length)
-    console.log(allcharacters[index])
-      upassword+=allcharacters[index]
-  }
+  else{
+            if(yesnumbers){
+              allcharacters+=validnumbers
+            }
+            if(yesuppercase){
+              allcharacters+=validuppercase
+            }
+            if(yeslowercase){
+              allcharacters+=validlowercase
+            }
+            if(yescharacters){
+              allcharacters+=validspecialcharacters
+            }
+            console.log("AcceptedCharacters",allcharacters);
+          
+            for(let i=1;i<=pswdlength;i++){
+              var index = Math.floor(Math.random() * allcharacters.length)
+              console.log(allcharacters[index])
+                upassword+=allcharacters[index]
+            }
 
- console.log("Password:",upassword)
- return upassword}
+          console.log("Password:",upassword)
+          return upassword
+     }
+}  
  else{
    return "password lenght has to be greater than 8 and less than 128"
  }
