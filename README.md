@@ -1,3 +1,20 @@
+## Author:  Adeola Afariogun
+
+
+
+# Project: Portfolio
+
+
+#### Technology: HTML, JavaScript.
+
+
+
+
+### Deployment URL: [link to My Portfolio!](https://adeola55.github.io/homework03/)
+
+
+
+
 # 03 JavaScript: Password Generator
 
 i created an application that generates a random passwrod based on user-selected criteria.it will run in the broswer and it will be responsive. It creates a stronger password.
