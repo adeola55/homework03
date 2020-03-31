@@ -10,6 +10,7 @@ var upassword=""
 function writePassword() {
   var password = getuserinput();
   var passwordText = document.querySelector("#password");
+  console.log(password)
 
   passwordText.value = password;
 
@@ -19,6 +20,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function getuserinput(){
+  allcharacters=""
+  upassword=""
   var pswdlength=prompt("length of the password")
   if( pswdlength >= 8 && pswdlength <= 128){
   var yesnumbers=confirm("would you like to have numbers")
